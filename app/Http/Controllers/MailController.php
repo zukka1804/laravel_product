@@ -36,7 +36,7 @@ class MailController extends Controller
 
         $data = $validator->validate();
 
-        Mail::to('admin@hoge.co.jp')->send(new TestMail($data));
+        Mail::to('yasuyuki.ishizuka.law.office@gmail.com')->send(new TestMail($data));
 
         session()->flash('success', '送信しました！');
         return back();

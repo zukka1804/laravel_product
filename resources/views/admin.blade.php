@@ -14,7 +14,7 @@
                     </div>
                     <table class="table table-striped">
                         <thead>
-                            <th>支援者氏名</th>
+                            <th>支援者の氏名</th>
                             <th>寄付希望者名</th>
                             <th>希望日時</th>
                             <th>最短面談日</th>

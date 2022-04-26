@@ -6,6 +6,9 @@ use App\Models\User; // 追加
 use Illuminate\Http\Request;
 use App\Models\Book;
 use Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
+
 
 class BookController extends Controller
 {
@@ -55,6 +58,8 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        Mail::to('yasuyuki.ishizuka.law.office@gmail.com')
+        ->send(new TestMail());
 		// バリデーション
 	    $validator = Validator::make($request->all(), [
 	        'donator_name'   => 'required | min:3 | max:255',
